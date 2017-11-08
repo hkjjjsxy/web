@@ -115,8 +115,8 @@
             <!-- Add Pagination -->
             <div class="swiper-pagination swiper-pagination-white"></div>
             <!-- Add Arrows -->
-            <div class="swiper-button-next swiper-button-white"></div>
-            <div class="swiper-button-prev swiper-button-white"></div>
+            <!--<div class="swiper-button-next swiper-button-white"></div>-->
+            <!--<div class="swiper-button-prev swiper-button-white"></div>-->
 
         </div>
     </div>
@@ -131,13 +131,9 @@
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
         spaceBetween: 30,
         effect: 'fade',
-        autoplay: 2000,//自动播放时间毫秒
-        grabCursor: true,//鼠标形状
-        //autoHeight: true, //高度随内容变化,有问题，页面无反应
+        autoplay: 5000,//自动播放时间毫秒
         loop: true,//循环播放
 
     });
