@@ -1,46 +1,96 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Demo styles -->
     <style type="text/css">
-        body{margin: 0px;
-            min-width:320px;}
-        .main{max-width: 720px;margin: 0px auto;}
-        .head{background-color:#eeeeee; }
-
-        .logo{padding: 8px 20px 1px;        }
-        .logo img{height: 40px}
-
-        .navbar{padding: 0 10px;}
-        .navbar a{
-            webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            float: left;width: 32%;text-align: center;text-decoration: none;
-                    color: #45a8fb;font-size: 14px;
-                        border:1px solid #ffffff;
-                        margin: 2px 0.666%}
-
-        .navbar a:hover{color: #337aba
+        body {
+            margin: 0;
+            min-width: 320px;
         }
 
+        .main {
+            max-width: 720px;
+            margin: 0 auto;
+        }
 
+        .head {
+            background-color: #eeeeee;
+        }
 
+        .logo {
+            padding: 8px 20px 1px;
+        }
+
+        .logo img {
+            height: 40px
+        }
+
+        .navbar {
+            padding: 0 10px;
+        }
+
+        .navbar a {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            float: left;
+            width: 32%;
+            text-align: center;
+            text-decoration: none;
+            color: #45a8fb;
+            font-size: 14px;
+            border: 1px solid #ffffff;
+            margin: 2px 0.666%
+        }
+
+        .navbar a:hover {
+            color: #337aba
+        }
+
+        .banner {
+            margin: 2px auto;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 0;
+            padding-bottom: 36%; /*banner按750*270比例设置视觉图*/
+        }
+
+        .swiper-slide {
+            width: 100%;
+            height: 0;
+            padding-bottom: 36%;
+            overflow: hidden;
+            background-position: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+        }
+
+        .bannar1 > img:first-child {
+            width: 100%;
+            min-width: 320px;
+        }
     </style>
 </head>
 <body>
 <div class="main">
     <div class="head">
-        <div class="logo" >
-            <img src="images/logo.png" >
+        <div class="logo">
+            <img src="images/logo.png">
         </div>
 
         <div class="navbar">
 
-            <a  href="#">首页</a>
+            <a href="#">首页</a>
             <a href="#">企业介绍</a>
             <a href="#">企业新闻</a>
             <a href="#">产品中心</a>
@@ -49,18 +99,49 @@
             <div style="clear: both"></div>
 
         </div>
+    </div>
+    <div style="clear: both"></div>
+
+    <!-- Swiper -->
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(images/banner1.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(images/news1.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(images/banner3.jpg)"></div>
+
+
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-white"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+
+        </div>
+    </div>
+
 </div>
 
- </div>
+<!-- Swiper JS -->
+<script src="js/swiper.min.js"></script>
 
-    <div class="bannar">
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30,
+        effect: 'fade',
+        autoplay: 2000,//自动播放时间毫秒
+        grabCursor: true,//鼠标形状
+        //autoHeight: true, //高度随内容变化,有问题，页面无反应
+        loop: true,//循环播放
 
-</div>
-<div class="content">
+    });
+</script>
 
-</div>
-<div class="foot">
-
-</div>
 </body>
 </html>
