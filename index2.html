@@ -75,16 +75,21 @@
             background-size: cover;
         }
 
-
         /*.swiper-pagination {*/
-            /*bottom: 0px; !*!这里改不起作用*去除css里面的bottom才有效？*!*!*/
+        /*bottom: 0px; !*!这里改不起作用*去除css里面的bottom才有效？*!*!*/
         /*}*/
         /*.swiper-pagination-bullet{width: 4px;height:4px }!*!这里改不起作用*去除css里面的bottom才有效？*!*!*/
-
-        .bannar1 > img:first-child {
-            width: 100%;
-            min-width: 320px;
-        }
+        .content{margin: 10px;}
+        .news{border: solid #dddddd 1px;padding: 10px;margin: 10px auto;}
+        .news>h4{text-align: center;margin: 0px auto 6px;}
+        .news_img{width: 100%;height:100%;margin: 4px auto;text-align: center}
+        .news_img img{width:100%;border: 0px;margin: 0px}
+        .news p{font-size: 14px;text-indent:2em;margin: 0;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;}
     </style>
 </head>
 <body>
@@ -115,23 +120,37 @@
                 <div class="swiper-slide" style="background-image:url(images/banner1x750.jpg)"></div>
                 <div class="swiper-slide" style="background-image:url(images/banner2x750.jpg)"></div>
                 <div class="swiper-slide" style="background-image:url(images/banner4x750.jpg)"></div>
-
-
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination swiper-pagination-white "></div>
             <!-- Add Arrows -->
             <!--<div class="swiper-button-next swiper-button-white"></div>-->
             <!--<div class="swiper-button-prev swiper-button-white"></div>-->
-
         </div>
     </div>
-
+    <div class="content">
+        <div class="news">
+            <h4>湘江新区发布十大新建项目</h4>
+            <div class="news_img"><img src="images/xinxib.jpg"> </div>
+            <div class="news_con">
+                <p>中部地区首个国家级新区——湖南湘江新区今天授牌，标志新区建设正式启动。为抓住湘江新区上升为国家战略的重大机遇，加强新区品牌营销，加大新区产业导入和招商……
+                </p>
+            </div>
+        </div>
+        <div class="news">
+            <h4>湘中光通信 第二代光纤项目长沙奠基</h4>
+            <div class="news_img"><img src="images/xinxia.jpg"> </div>
+            <div class="news_con">
+                <p>今天上午，占地700亩、总投资近60亿元的中光通信第二代光纤研发生产基地项目，在长沙国家高新技术产业开发区正式奠基……
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
+
 
 <!-- Swiper JS -->
 <script src="js/swiper.min.js"></script>
-
 <!-- Initialize Swiper -->
 <script>
     var swiper = new Swiper('.swiper-container', {
@@ -141,9 +160,7 @@
         effect: 'fade',
         autoplay: 5000,//自动播放时间毫秒
         loop: true,//循环播放
-
     });
 </script>
-
 </body>
 </html>
