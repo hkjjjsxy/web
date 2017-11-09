@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        ul li{list-style: none;}
+        .baner-box{position: relative;width: 400px;height: 200px;overflow: hidden;}
+        .banner{width:1600px;position: absolute;left:0;animation-name: bannerMove;animation-duration: 8s;animation-iteration-count: infinite; padding: 0}
+        @keyframes bannerMove {
+            0%,30%{left: 0;}
+            35%,65%{left: -400px; }
+            70%,99%{left: -800px; }
+            100%{left: -1200px; }
+        }
+        .banner li{float: left; width: 400px;height: 200px;}
+    </style>
+</head>
+<body>
+<div class="baner-box">
+    <ul class="banner">
+        <li style="background-color:#f90;"></li>
+        <li style="background-color:#f00;"></li>
+        <li style="background-color:#9f0;"></li>
+        <li style="background-color:#333;"></li>
+    </ul>
+</div>
+</body>
+</html>
+
+<!--下面一个是淡除效果，更好用。
+0%,30%{left: 0;} 百分号内部是停留时间；两个之间是切换时间
+35%,65%{left: -400px; }
+<!--df
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        div
+        {
+            width:750px;
+            height:270px;
+            background:red;
+            position:relative;
+            animation:mymove 5s infinite;
+            -webkit-animation:mymove 50s infinite; /* Safari and Chrome */
+        }
+
+
+        @-webkit-keyframes mymove /* Safari and Chrome */
+        {
+            0%,15%{top:0px; left:0px; background-image: url("images/banner1x750.jpg");}
+            20%,45% {top:0px; left:0px; background-image: url("images/banner2x750.jpg");}
+            50%,70% {top:0px; left:0px;background-image: url("images/banner1x750.jpg");}
+            75%,90%  {top:0px; left:0px; background-image: url("images/banner2x750.jpg");}
+            100% {top:0px; left:0px; background-image: url("images/banner1x750.jpg");}
+        }
+    </style>
+</head>
+<body>
+
+<p><strong>注意:</strong>@keyframes不兼容IE 9 and 以及更早版本的浏览器.</p>
+
+<div></div>
+
+</body>
+</html>
+-->
