@@ -1,0 +1,345 @@
+/*css reset begin*/
+
+:root {
+    --gray: #868e96;
+    --gray-dark: #343a40;
+    --primary: #337ab7;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+article,
+aside,
+footer,
+header,
+main,
+menu,
+nav {
+    display: block;
+}
+
+a {
+    color: #0094fa;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+    color: #0082e3;
+    text-decoration: none;
+}
+
+a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+    outline: 0;
+}
+
+.text-center {
+    text-align: center;}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.card-img {
+    width: 100%;
+    margin-bottom: 8px;
+    border-radius: calc(0.25rem - 1px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5em;
+    margin-top: 0;
+}
+
+p {
+    margin: 8px auto;
+    font-size: 14px;
+}
+
+h1, .h1 {
+    font-size: 36px;
+}
+
+h2, .h2 {
+    font-size: 30px;
+}
+
+h3, .h3 {
+    font-size: 24px;
+}
+
+h4, .h4 {
+    font-size: 18px;
+}
+
+h5, .h5 {
+    font-size: 14px;
+}
+
+h6, .h6 {
+    font-size: 12px;
+}
+
+small,
+.small {
+    font-size: 80%;
+    font-weight: 400;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+ol,
+ul,
+dl {
+    margin: 0;
+    padding: 0;
+    /*margin-bottom: 1rem;暂未使用*/
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+/*css reset end*/
+
+/*sfot通用部分begin*/
+.container-fluid {
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.page {
+    max-width: 750px;
+    min-width: 320px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/*sfot通用部分end*/
+
+header {
+    background-color: #eaeaea;
+    padding: 3px 0;
+}
+
+.logo {
+    max-height: 40px;
+    overflow: hidden;
+}
+
+.logo img {
+    height: 40px
+
+}
+
+.nav-main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-column {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item {
+    flex: 0 0 32.5%;;
+    border: 1px solid #fff;
+    text-align: center;
+    margin-top: 3px;
+}
+.banner-index{margin-bottom: 10px;}
+
+.swiper-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 36%; /*banner按750*270比例设置视觉图*/
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 0;
+    padding-bottom: 36%;
+    overflow: hidden;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.border-item {
+    border: solid #dddddd 1px;
+    margin-bottom: 10px;
+    padding: 10px 5px 5px;
+}
+
+.news-content {
+    text-indent: 2em;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.border-content {
+    text-indent: 2em;
+}
+.footer {
+    font-size: 12px;
+    background-color: #eaeaea;
+    padding: 6px 0;}
+.footer a {
+    display: block;
+    text-decoration: none;
+    color: #7a7a7a;
+}
+}
+/*
+
+
+
+
+!*、、*!
+.news {
+    border: solid #dddddd 1px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.news > h4 {
+    text-align: center;
+    margin: 0 auto 6px;
+}
+
+.news_img {
+    width: 100%;
+    height: 100%;
+    margin: 4px auto;
+    text-align: center
+}
+
+.news_img img {
+    width: 100%;
+    border: 0;
+    margin: 0
+}
+
+.news p {
+    font-size: 14px;
+    text-indent: 2em;
+    margin: 0;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.footer {
+    text-align: center;
+    padding: 12px 0 6px;
+    background-color: #eaeaea;
+}
+
+.footer a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #7a7a7a;
+    font-size: 12px;
+}
+
+.footer a:hover {
+    color: #337aba
+}
+
+.banner-about {
+
+    padding-bottom: 36%;
+    background: center url("../images/aboutbanner.jpg");
+    background-size: cover;
+    margin: 0 -10px;
+
+}
+
+.conner-about {
+    margin: 10px;
+}
+
+.conner-news {
+    margin: 6px 10px;
+}
+
+.news-item {
+    border: solid 1px #ddd;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto
+}
+
+*/
